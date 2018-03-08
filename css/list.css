@@ -1,0 +1,31 @@
+/*公用*/
+*{padding:0;margin: 0;}
+.head {height: 44px; line-height: 44px; background: #2e2c32; font-size: 18px; text-align: center; color: #ffffff; text-align: center; position: fixed; width: 100%;}
+.head a{display: block;position: absolute; height: 44px; width: 34px;}
+/*index*/
+html,body,#container {height:100%;background: #f2f2f2}
+#container{width: 100%;display:table; margin:0 auto;}
+#container > div{display: table-row;}
+.floatleft {float: left;}
+.menu {height: 45px; line-height: 45px; border-bottom: 1px solid #e6e6e6; background: #ffffff; position: fixed; width: 100%; top: 44px;}
+.menu ul li {float: left; width: 33%; text-align: center;}
+.menu ul li:nth-child(3) {width: 34%;}
+.menu ul li a{color: #4c4c4c; font-size: 15px; display: block;}
+.menu ul li a span {display: inline-block; vertical-align: middle;}
+.menu ul li a span img {display: block;}
+.menu ul li.set a{color: #be0c0c;}
+.clear {clear: both;}
+/*列表内容*/
+.ht {height: 44px;}
+#container > div#content {display: block;}
+#content ul {padding-top: 6px; clear: both;}
+#content ul li {width: 50%; margin-bottom: 6px; box-sizing: border-box; overflow: hidden; float: left;}
+#content ul li {padding-right: 3px;}
+#content ul li:nth-child(2n) {padding-right: 0; padding-left: 3px;}
+#content ul div {background: #ffffff; height: 171px; padding: 8px;}
+.cimg {max-width: 100%; width: 100%;}
+.cname {color: #4c4c4c; font-size: 13px; padding-top: 2px; overflow: hidden; text-overflow: ellipsis; height: 16px;}
+.cnum {color: #be0c0c; font-size: 18px; padding-top: 2px;}
+.cnum span {font-size: 13px;}
+/*下拉加载*/
+.getmore {text-align: center; height: 40px; line-height: 40px; clear: both; font-size: 14px; color: #cccccc; width: 100%; clear: both;}

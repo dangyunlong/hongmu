@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>红木家具-列表</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/list.css"/>
+	</head>
+	<body>
+		<div id="container">
+			<div class="head">
+				<a href="index.html"><img src="images/list/aro.png" width="8" height="15"/></a>
+				红木家具
+			</div>
+		    <div id="content">
+		    	<!--高度占据符 请勿删除-->
+		    	<div class="ht"></div>
+		    	<!--内容开始-->
+		    	<ul id="box">
+		    		<li>
+		    			<div>
+		    				<a href="details.html">
+			    				<p><img src="images/list/1.png" alt="" height="125" class="cimg"/></p>
+			    				<p class="cname">刺猬紫檀 圈椅三件套</p>
+			    				<p class="cnum"><span>￥</span>3200</p>
+		    				</a>
+		    			</div>
+		    		</li>
+		    		<li>
+		    			<div>
+		    				<a href="details.html">
+			    				<p><img src="images/list/1.png" alt="" height="125" class="cimg"/></p>
+			    				<p class="cname">刺猬紫檀 圈椅三件套</p>
+			    				<p class="cnum"><span>￥</span>3200</p>
+		    				</a>
+		    			</div>
+		    		</li>
+		    		<li>
+		    			<div>
+		    				<a href="details.html">
+			    				<p><img src="images/list/1.png" alt="" height="125" class="cimg"/></p>
+			    				<p class="cname">刺猬紫檀 圈椅三件套</p>
+			    				<p class="cnum"><span>￥</span>3200</p>
+		    				</a>
+		    			</div>
+		    		</li>
+		    		<li>
+		    			<div>
+		    				<a href="details.html">
+			    				<p><img src="images/list/1.png" alt="" height="125" class="cimg"/></p>
+			    				<p class="cname">刺猬紫檀 圈椅三件套</p>
+			    				<p class="cnum"><span>￥</span>3200</p>
+		    				</a>
+		    			</div>
+		    		</li>
+		    		<li>
+		    			<div>
+		    				<a href="details.html">
+			    				<p><img src="images/list/1.png" alt="" height="125" class="cimg"/></p>
+			    				<p class="cname">刺猬紫檀 圈椅三件套</p>
+			    				<p class="cnum"><span>￥</span>3200</p>
+		    				</a>
+		    			</div>
+		    		</li>
+		    		<li>
+		    			<div>
+		    				<a href="details.html">
+			    				<p><img src="images/list/1.png" alt="" height="125" class="cimg"/></p>
+			    				<p class="cname">刺猬紫檀 圈椅三件套</p>
+			    				<p class="cnum"><span>￥</span>3200</p>
+		    				</a>
+		    			</div>
+		    		</li>
+		    		<li>
+		    			<div>
+		    				<a href="details.html">
+			    				<p><img src="images/list/1.png" alt="" height="125" class="cimg"/></p>
+			    				<p class="cname">刺猬紫檀 圈椅三件套</p>
+			    				<p class="cnum"><span>￥</span>3200</p>
+		    				</a>
+		    			</div>
+		    		</li>
+		    	</ul>
+		    	<!--内容结束-->
+		    	<div class="getmore">下拉加载更多</div>
+		    </div>
+		</div>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+       		//第一步 判断是否存在Storage 决定是查询还是初始化
+       		if(window.localStorage.json3){
+            	//读取刷新标志并刷新页面
+            	window.localStorage.removeItem("json3");
+            	//window.location.href="list.html";
+            	window.location.reload(); 
+            }else{
+                if(window.localStorage.json1){
+                    var storage=window.localStorage;
+                    var date=storage.getItem("json1");
+                    var jsonparse=eval("("+date+")");
+                    if(jsonparse.ajaxnum!=0){
+                        for(i=1;i<=jsonparse.ajaxnum;i++){
+                           cha();
+                        }
+                    }
+                }else{
+                	//初始化
+                    var storage=window.localStorage;
+                    var js={"ajaxnum":0};
+                    var top={"top":0};
+                    storage.setItem("json1",JSON.stringify(js));
+                    storage.setItem("json2",JSON.stringify(top));
+                }
+            }
+            //第二步页面到底部以后 触发ajax
+            $(function(){
+				$(window).scroll(function(){
+					var docHeight=$(document).height();
+					var windHeigth=$(window).height();
+					var scollPx=docHeight-windHeigth;
+					if($(window).scrollTop()==scollPx){
+						add();
+					}
+				})
+			})
+            //增
+            function add(){
+                $.ajax({
+                    type:"get",
+                    url:"json.php",
+                    dataType:"json",
+                    success:function(data){
+                    	
+                    	//写入页面部分 ，替换成你的，for的次数时每次添加的个数
+                    	for(i=0;i<=3;i++){
+                    		$("#box").append("<li><div><a href='details.html'><p><img src='images/list/1.png' height='125' class='cimg'/></p><p class='cname'>刺猬紫檀 圈椅三件套</p><p class='cnum'><span>￥</span>3200</p></a></div></li>");
+                    	}
+                    	
+                        //读取
+                        var storage=window.localStorage;
+                        var date=storage.getItem("json1");
+                        var jsonparse=eval("("+date+")");
+                        //计算 ajax次数
+                        var num=jsonparse.ajaxnum+1;
+                        //次数写入
+                        var storage=window.localStorage;
+                        var js={"ajaxnum":num};
+                        storage.setItem("json1",JSON.stringify(js))
+                        //设置滚动条高度 （未来元素）
+		                $("#box li a").on("click",function(){
+		            		//计算 滚动条高度
+		            		var storage=window.localStorage;
+		                    var top=$(window).scrollTop();
+		                    var scorlltop={"top":top};
+		                    storage.setItem("json2",JSON.stringify(scorlltop))
+		            	})
+                    }
+                });
+            }
+            //查
+            function cha(){
+                $.ajax({
+                    type:"get",
+                    url:"json.php",
+                    dataType:"json",
+                    success:function(data){
+
+                        //写入页面部分 ，替换成你的，for的次数时每次添加的个数
+                    	for(i=0;i<=3;i++){
+                    		$("#box").append("<li><div><a href='details.html'><p><img src='images/list/1.png' height='125' class='cimg'/></p><p class='cname'>刺猬紫檀 圈椅三件套</p><p class='cnum'><span>￥</span>3200</p></a></div></li>");
+                    	}
+                        
+                        
+                        //读取滚动条高度
+		                var storage=window.localStorage;
+		                var date2=storage.getItem("json2");
+		                var mytop=eval("("+date2+")");
+		                setTimeout(function(){
+		                	$(window).scrollTop(mytop.top);
+		                },80)
+                    }
+                });
+            }
+            //设置滚动条高度 （已有元素）
+            $("#box li a").on("click",function(){
+        		//计算 滚动条高度
+        		var storage=window.localStorage;
+                var top=$(window).scrollTop();
+                var scorlltop={"top":top};
+                storage.setItem("json2",JSON.stringify(scorlltop))
+        	})
+        </script>
+	</body>
+</html>

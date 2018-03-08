@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>红木家具-首页</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<div id="container">
+		    <div class="head">红木家具</div>
+		    <div id="content">&nbsp;</div>
+		    <div class="bottom">
+				<ul>
+					<li>
+						<a href="gywm.html">
+							<p>关于我们</p>
+							<p>About Us</p>
+						</a>
+					</li>
+					<li>
+						<a href="list.html">
+							<p>产品展示</p>
+							<p>Product Display</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<p>微新闻</p>
+							<p>News</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//初始化
+            if(window.localStorage.json1){
+                var storage=window.localStorage;
+                var js={"ajaxnum":0};
+                storage.setItem("json1",JSON.stringify(js))
+            }
+		</script>
+	</body>
+</html>

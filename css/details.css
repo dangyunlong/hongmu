@@ -1,0 +1,45 @@
+/*公用*/
+*{padding:0;margin: 0;}
+.head {height: 44px; line-height: 44px; background: #2e2c32; font-size: 18px; text-align: center; color: #ffffff; text-align: center; position: fixed; width: 100%;}
+.head a{display: block;position: absolute; height: 44px; width: 34px;}
+/*list*/
+input[type="button"],input[type="submit"],input[type="reset"],input[type="text"]{
+-webkit-appearance: none;
+border-radius: 0;
+}
+input[type="submit"] {
+border-radius:5px;	
+}
+textarea { -webkit-appearance: none;border-radius: 0;}
+html,body,#container {height:100%;background: #f2f2f2;}
+#container{width: 100%;display: table; margin:0 auto;}
+#container > div{display: table-row;}
+.floatleft {float: left;}
+.menu {height: 45px; line-height: 45px; border-bottom: 1px solid #e6e6e6; background: #ffffff; position: fixed; width: 100%; top: 44px;}
+.menu ul li {float: left; width: 33%; text-align: center;}
+.menu ul li:nth-child(3) {width: 34%;}
+.menu ul li a{color: #4c4c4c; font-size: 15px; display: block;}
+.menu ul li a span {display: inline-block; vertical-align: middle;}
+.menu ul li a span img {display: block;}
+.menu ul li.set a{color: #be0c0c;}
+.clear {clear: both;}
+/*列表内容*/
+.ht {height: 44px;}
+#container > div#content {display: block;}
+.imgbox img{width: 100%; max-width: 100%;display: block;}
+.sp-main {background: #ffffff; height: 53px; padding-top: 10px; padding-left: 16px;}
+.sp-main p:nth-child(1) {font-size: 15px;color: #4c4c4c;}
+.sp-main p:nth-child(2) {font-size: 20px; color: #be0c0c;}
+.sp-main p:nth-child(2) span {font-size: 15px;}
+
+.det-main {padding: 16px;padding-top: 10px; background: #ffffff; padding-bottom: 6px; margin-top: 10px; margin-bottom: 10px; font-size: 13px;}
+.divl {line-height: 25px;}
+.divs {padding-top: 8px;}
+.divs input,.divs textarea {width: 100%; margin-top: 6px; border: 1px solid #cccccc}
+.divs input {padding: 9px 0;}
+.divb input{height: 32px; width: 170px; text-align: center; line-height: 34px; font-size: 14px; border: 0; background: #79080d; color:#ffffff; margin: 0 auto; display: block;margin-top: 8px; margin-bottom: 8px;}
+
+.det-bottom {padding: 16px;padding-top: 10px; background: #ffffff; padding-bottom: 6px;    font-size: 12px;}
+.det-bottom img{width: 100%; max-width: 100%; display: block;    margin-bottom: 4px; margin-top: 4px;}
+.det-title {height: 27px; border-bottom: 1px solid #e6e6e6; font-size: 15px; margin-bottom: 10px;}
+.det-title span {display: inline-block; border-left: 2px solid #79080d; padding-left: 6px;height: 15px;line-height: 15px;}

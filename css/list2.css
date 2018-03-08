@@ -1,0 +1,21 @@
+/*公用*/
+*{padding:0;margin: 0;}
+.head {height: 44px; line-height: 44px; background: #2e2c32; font-size: 18px; text-align: center; color: #ffffff; text-align: center; width: 100%;}
+.head a{display: block;position: absolute; height: 44px; width: 34px;}
+/*index*/
+html,body,#container {height:100%;overflow:hidden}
+.bottom{background: #333333; height: 55px; width: 100%; overflow: hidden;}
+.bottom li {float: left; box-sizing: border-box; border-right: 1px solid #666666;width:33%;text-align:center ;}
+.bottom li:nth-last-child(1) {border-right: 0;}
+.bottom li a { display: block; color: #ffffff; font-size: 17px; padding-top: 8px;}
+.bottom li a p {height:22px}
+.bottom li a>p:nth-child(2) { font-size: 11px; color: #999999;}
+#content {background: url(../images/list2/bg.png) no-repeat; background-size: 100% 100%;}
+#container {height:100%;overflow:hidden;}
+#container{width: 100%;display: table; margin:0 auto;}
+#container > div{display: table-row;}
+.bmenu {position: absolute; bottom: 0; left: 0; padding-bottom: 20px;}
+.bmenu ul li{ float: left; width: 50%; text-align: center; font-size: 14px; margin-bottom: 20px;}
+.bmenu ul li a {display: block; color: #ffffff;}
+.bmenu ul li img {display: block; margin: 0 auto;}
+.bmenu ul li div {height: 35px; line-height: 35px;}

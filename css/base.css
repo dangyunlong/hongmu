@@ -1,0 +1,51 @@
+@charset "utf-8";
+/*=========================Reset_start==========================*/
+body,h1,h2,h3,h4,h5,h6,div,p,dl,dt,dd,ol,ul,li,form,table,th,td,a,img,span,strong,var,em,input,textarea,select,option{margin: 0; padding: 0;}
+html,body{font-family:"微软雅黑","宋体",Arail,Tabhoma;text-align: left;}
+ul,ol{list-style: none;}
+img{border: 0 none;}
+input,select,textarea{outline:0;}
+textarea{resize:none; overflow: auto;}
+table{border-collapse: collapse; border-spacing: 0;}
+th,strong,var,em{font-weight: normal; font-style: normal;}
+a{text-decoration: none;}
+/*==========================Reset_End===========================*/
+/*=========================Font==========================*/
+.ft12{font-size:12px}
+.ft14{font-size:14px}
+.ft16{font-size:16px}
+.ft18{font-size:18px}
+.ft20{font-size:20px}
+.ft22{font-size:22px}
+.ft24{font-size:24px}
+.ft26{font-size:26px}
+.ft28{font-size:28px}
+.ft30{font-size:30px}
+.ft32{font-size:32px}
+.ft34{font-size:34px}
+.ft36{font-size:36px}
+.ft38{font-size:38px}
+.ft40{font-size:40px}
+.ft42{font-size:42px}
+.ft44{font-size:44px}
+.ft46{font-size:46px}
+.ft48{font-size:48px}
+.ft50{font-size:50px}
+.ft52{font-size:52px}
+.ft54{font-size:54px}
+.ft56{font-size:56px}
+.ft58{font-size:58px}
+.ft60{font-size:60px}
+/*=========================Font_End==========================*/
+/*=========================Color==========================*/
+.c33  {color:#333333;} /*标题深灰色*/
+.cd3  {color:#d3d3d3;} /*略浅的标题灰色*/
+.cbc8 {color:#bc8e6c;} /*标题选中色*/
+.c99 {color:#999999;} /*浅灰 小字说明色 使用于更多 或 时间*/
+.cb0b {color:#b0b0b0;} /*浅灰 更浅的小字说明色*/
+.c3a8 {color:#3a84cf;} /*链接蓝色*/
+/*=========================Color_End==========================*/
+/*=========================Float==========================*/
+.floatleft {float: left;}
+.floatright {float:right;}
+.clear {clear:both}
